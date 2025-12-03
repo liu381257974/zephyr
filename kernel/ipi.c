@@ -198,6 +198,10 @@ void z_sched_ipi(void)
 	arch_ipi_lazy_coprocessors_save();
 #endif
 
+#ifdef CONFIG_ARCH_IPI_LAZY_COPROCESSORS_SAVE1
+
+#endif
+
 #ifdef CONFIG_SCHED_IPI_SUPPORTED
 	ipi_work_process(&_kernel.cpus[_current_cpu->id].ipi_workq);
 #endif
